@@ -1,4 +1,7 @@
 # 3223600029_Syauqi-Nabil-Falah_ESP32-S3-Peripherals_n_Cores
+Sebelum mulai memprogram, rangkailah ESP32 berikut ini dengan konfigurasi pin yang sesuai.
+
+<img width="633" height="708" alt="image" src="https://github.com/user-attachments/assets/c4d0d1d4-1219-46ac-af00-3a31464146ec" />
 
 Masukkan program berikut pada Wokwi:
 # Program memilih Task pada setup
