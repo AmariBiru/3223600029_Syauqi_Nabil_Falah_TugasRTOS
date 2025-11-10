@@ -75,6 +75,16 @@ void taskLED(void *pv) {
   }
 }
 ```
+LED Core 0:
+
+https://github.com/user-attachments/assets/0321390b-c566-46a1-b55f-7278a747336b
+
+LED Core 1:
+
+https://github.com/user-attachments/assets/440f6657-2f46-42db-890a-94dc96640974
+
+
+
 # Task untuk BUZZER
 ```cpp
 #include <Arduino.h>
