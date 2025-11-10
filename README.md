@@ -49,6 +49,31 @@ void setup() {
 }
 ```
 untuk mengganti task maka selectedTask dapat diganti menjadi salah satu task yang terdapat pada enum berikut ini, setelah pemilihan task dilakukan, pemilihan core juga dapat di inisialisasi.
+
+**TASK_LED**
+Task ini berfungsi untuk menyalakan dan mematikan LED secara bergantian dengan interval waktu tertentu. Delay selama 500 ms digunakan untuk mengatur kecepatan kedipan agar terlihat jelas di mata.
+
+**TASK_BUZZER**
+Bagian ini mengatur buzzer agar berbunyi dengan pola tertentu, yaitu hidup selama 200 ms dan mati selama 200 ms secara berulang.
+
+**TASK_BUTTON**
+Task ini bertugas membaca dua tombol input yang terhubung ke pin BUTTON_A dan BUTTON_B. Keduanya diatur dengan mode INPUT_PULLUP, sehingga logika yang dibaca akan aktif rendah (LOW saat ditekan). Nilai dari masing-masing tombol akan ditampilkan di Serial Monitor.
+
+**TASK_POT**
+Fungsi dari task ini adalah membaca nilai dari potensiometer melalui pin analog. Nilai tersebut kemudian dikirim ke Serial Monitor agar kita bisa melihat perubahan tegangan saat potensiometer diputar. Nilai ini biasanya digunakan untuk mengatur parameter seperti kecepatan, intensitas, atau posisi motor secara manual. Pembacaan dilakukan setiap 200 ms agar respon tetap halus tanpa terlalu membebani prosesor.
+
+TASK_OLED
+Task ini menangani tampilan pada layar OLED dengan menggunakan komunikasi I2C. Setiap setengah detik, tampilan diperbarui untuk menjaga agar layar tetap aktif. Task ini berguna untuk menampilkan status, data sensor, atau pesan singkat dari sistem secara real-time.
+
+TASK_ENCODER
+Bagian ini membaca sinyal dari rotary encoder yang terdiri dari dua pin, yaitu CLK dan DT. Setiap kali posisi encoder berubah, task akan mendeteksi arah putaran dengan membandingkan kedua sinyal tersebut. Nilai hasil perhitungan disimpan di variabel encValue dan dicetak ke Serial Monitor. Dengan cara ini, kita bisa mengetahui apakah encoder diputar ke kanan atau kiri.
+
+TASK_SERVO
+Task ini menggerakkan motor servo dengan pola maju-mundur dari sudut 20 derajat hingga 160 derajat, lalu kembali lagi ke posisi awal. Pergerakan dilakukan bertahap setiap beberapa derajat dengan jeda 15 ms agar gerakannya halus.
+
+TASK_STEPPER
+Task terakhir ini berfungsi untuk mengontrol motor stepper menggunakan library AccelStepper. Motor digerakkan ke posisi 300 langkah, lalu kembali ke -150 langkah secara berulang. Setiap pergerakan dilakukan dengan akselerasi dan kecepatan tertentu agar gerakannya tidak tiba-tiba.
+
 # enum untuk memilih Task
 ```cpp
 // =================== ENUM FOR SELECTION ====================
